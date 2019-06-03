@@ -1,0 +1,23 @@
+{
+  "name": "check-passport-status-india",
+  "version": "1.0.0",
+  "description": "Puppeteer script to fetch passport status (India). ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niinpatel/check-passport-status-india.git"
+  },
+  "author": "Nitin Patel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niinpatel/check-passport-status-india/issues"
+  },
+  "homepage": "https://github.com/niinpatel/check-passport-status-india#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "puppeteer-core": "^1.17.0"
+  }
+}
