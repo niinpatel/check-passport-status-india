@@ -21,8 +21,22 @@ const closeAfterDone = args.close == null ? true : args.close;
 const saveTheResult = args.save == null ? true : args.save;
 const headless = args.headless == null ? false : args.headless;
 
-const main = async ({ closeAfterDone, saveTheResult, headless }) => {
+const main = async ({
+  fileno,
+  dob,
+  closeAfterDone,
+  saveTheResult,
+  headless
+}) => {
   try {
+    if (!fileno) {
+      throw new Error('Please provide the fileno');
+    }
+
+    if (!dob) {
+      throw new Error('Please provide the date of birth in DD/MM/YYY format');
+    }
+
     const browser = await puppeteer.launch({
       executablePath: execPath,
       headless
@@ -64,4 +78,4 @@ const saveResult = async result =>
     'utf-8'
   );
 
-main({ closeAfterDone, saveTheResult, headless });
+main({ fileno, dob, closeAfterDone, saveTheResult, headless });
